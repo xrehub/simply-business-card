@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --lightblue: #00A8CC;
+    --darkblue: #142850;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    background: linear-gradient(to bottom left, var(--lightblue), var(--darkblue
+    ));
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    padding: 24px 0 12px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 20px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.link__linkedin {
+    text-decoration: none;
+    color: var(--lightblue);
+    position: relative;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+}
+
+header {
+    flex: 1;
+}
+
+section:first-child {
+    margin-right: 48px;
+}
+
+button {
+    width: 250px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 16px 0;
+    border-radius: 20px;
+    background: var(--lightblue);
+    background: linear-gradient(to bottom left, var(--lightblue), var(--darkblue));
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button:focus {
+    outline-color: #fff;
+}
+
+button:after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    left: -100px;
+    top: -25px;
+    transition: transform 0.7s;
+    transform: rotate(35deg);
+}
+
+button:hover:after {
+    transform: translateX(500px) rotate(45deg);
+}
+
+img {
+    width: 100%;
+}
+
+
+.link__linkedin:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--lightblue);
+    background: linear-gradient(90deg, transparent, var(--lightblue));
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: width 0.3s;
+
+}
+
+.link__linkedin:hover:after {
+    width: 100%;
+}
+
+.projects {
+    display: flex;
+    
+}
+
+.myself {
+    height: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+.person_name {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 16px;
+    background: linear-gradient(90deg, var(--lightblue), white);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.description_myself {
+    margin-top: 7%;
+}
+
+.container {
+    max-width: 1200px;
+    max-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+    border-radius: 20px;
+    padding: 32px;
+    position: relative;
+    backdrop-filter: blur(4px);
+    overflow: auto;
+}
+
+.--button {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    animation: toDown 12s linear infinite;
+}
+
+.--dots {
+    position: absolute;
+    width: 30%;
+    top: -1%;
+    right: 6%;
+    animation: toRotate 30s linear infinite;
+}
+
+.logo-business-bg {
+    position: absolute;
+    height: 205vh;
+    opacity: 0.3;
+    right: 60%;
+    transform: rotate(45deg);
+}
+
+.logo {
+    margin-bottom: 10px;
+    width: 120px;
+}
+
+.person_img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: solid 5px #00A8CC;
+}
+
+.person_img:hover {
+    animation-play-state: running;
+  }
+
+.person_img img {
+    width: 100%;
+    transform: translate(0px, -30px);
+}
+
+@keyframes toDown {
+    from {
+        transform: translateY(-30vh);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes toRotate {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
